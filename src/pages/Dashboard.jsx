@@ -1,7 +1,7 @@
 import React from "react";
 import TaskForm from "../components/TaskForm";
 import TaskList from "../components/TaskList";
-import ThemeToggle from "../components/ThemeToggle";
+//import ThemeToggle from "../components/ThemeToggle";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../css/Dashboard.css";
@@ -16,7 +16,7 @@ const Dashboard = ({ tasks, setTasks, search, setSearch, filter, setFilter, them
       <div className="dashboard-container">
         <div className="dashboard-content">
           {/* Search and Theme Toggle */}
-          <div className="top-controls">
+          {/* <div className="top-controls">
             <input 
               type="text" 
               placeholder="Search all tasks" 
@@ -25,7 +25,7 @@ const Dashboard = ({ tasks, setTasks, search, setSearch, filter, setFilter, them
               className="search-bar"
             />
             <ThemeToggle theme={theme} setTheme={setTheme} />
-          </div>
+          </div> */}
 
           {/* Task Filters */}
           <div className="task-filters">
