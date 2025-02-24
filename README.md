@@ -32,24 +32,25 @@ Prerequisites
 
     a) Clone the Repository
 
-    git clone https://github.com/RangerAkash1/task-manager.git
-    cd task-manager
+        git clone https://github.com/RangerAkash1/task-manager.git
+    
+        cd task-manager
 
     b) Install Dependencies
 
-    npm install
+        npm install
 
-    OR
+        OR
 
-    yarn install
+        yarn install
 
     c) Run the Application
 
-    npm start
+        npm start
 
-    OR
+        OR
 
-    yarn start
+        yarn start
 
     d) This will start the development server, and the app will be accessible at http://localhost:3000.
 
