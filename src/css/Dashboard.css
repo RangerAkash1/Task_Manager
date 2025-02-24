@@ -27,6 +27,15 @@
     width: 60%;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background: white;
+    color: black;
+}
+
+/* Dark theme support for search bar */
+.dark-theme .search-bar {
+    background: #333;
+    color: white;
+    border: 1px solid #555;
 }
 
 /* Task filter buttons */
@@ -46,9 +55,20 @@
     font-weight: bold;
 }
 
+/* Dark theme button adjustments */
+.dark-theme .filter-btn {
+    border: 2px solid #bbb;
+    color: #bbb;
+}
+
 .filter-btn.active {
     background-color: #007bff;
     color: white;
+}
+
+/* Dark theme for active button */
+.dark-theme .filter-btn.active {
+    background-color: #0056b3;
 }
 
 /* Sorting Section */
@@ -63,6 +83,15 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     cursor: pointer;
+    background: white;
+    color: black;
+}
+
+/* Dark theme sorting dropdown */
+.dark-theme .sort-dropdown {
+    background: #333;
+    color: white;
+    border: 1px solid #555;
 }
 
 /* Task Section */
@@ -71,6 +100,13 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme for task section */
+.dark-theme .task-section {
+    background: #252525;
+    color: white;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
 }
 
 /* No Task Animation */
@@ -82,9 +118,13 @@
 .no-tasks-image {
     width: 150px;
     margin-bottom: 10px;
+    filter: brightness(100%);
 }
 
-/* Floating Add Task Button */
+/* Dark theme support for no task image */
+.dark-theme .no-tasks-image {
+    filter: brightness(80%);
+}
 
 /* Floating Add Task Button */
 .add-task-btn {
@@ -104,7 +144,19 @@
     transition: all 0.3s ease-in-out;
 }
 
+/* Dark theme floating button */
+.dark-theme .add-task-btn {
+    background: #0056b3;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
 .add-task-btn:hover {
     background: #0056b3;
     transform: scale(1.1);
+}
+
+/* Dark Theme Background */
+.dark-theme {
+    background-color: #121212;
+    color: white;
 }

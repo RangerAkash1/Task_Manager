@@ -103,15 +103,21 @@ input:checked + .toggle-label .slider {
     transform: translateX(25px);
     background: #fdd835;
 }
-/* Light Theme */
-body {
-    background-color: #ffffff;
-    color: #000000;
-    transition: background-color 0.3s, color 0.3s;
+body.dark-theme {
+    background-color: #121212;
+    color: white;
 }
 
-/* Dark Theme */
-body.dark-theme {
-    background-color: #1a1a2e;
-    color: #ffffff;
+.dark-theme .nav-bar {
+    background-color: #1e1e1e;
+}
+
+.dark-theme .task-container {
+    background-color: #252525;
+    color: white;
+}
+
+.dark-theme button {
+    background-color: #333;
+    color: white;
 }
