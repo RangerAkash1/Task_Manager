@@ -4,90 +4,92 @@ Overview
 
 Task Manager is a simple and efficient task management web application that allows users to create, organize, and manage their tasks with ease. The application supports filtering, sorting, and theme toggling (light/dark mode) for better usability.
 
-Features
+###Features
 
-Add, delete, and mark tasks as complete
+1) Add, delete, and mark tasks as complete
 
-Filter tasks by different categories (All, Today, Week, Important, Completed)
+2) Filter tasks by different categories (All, Today, Week, Important, Completed)
 
-Sort tasks based on remaining time
+3) Sort tasks based on remaining time
 
-Dark and light theme support
+4) Dark and light theme support
 
-Persistent storage using local storage
+5) Persistent storage using local storage
 
-Responsive design for better accessibility
+6) Responsive design for better accessibility
 
-Setup Instructions
+###Setup Instructions
 
 Prerequisites
 
-Make sure you have the following installed on your system:
+ 1) Make sure you have the following installed on your system:
 
-Node.js (v14 or later)
+    Node.js (v14 or later)
 
-npm (Node Package Manager) or yarn
+    npm (Node Package Manager) or yarn
 
-Installation
+ 2) Installation
 
-Clone the Repository
+    a) Clone the Repository
 
-git clone https://github.com/RangerAkash1/task-manager.git
-cd task-manager
+    git clone https://github.com/RangerAkash1/task-manager.git
+    cd task-manager
 
-Install Dependencies
+    b) Install Dependencies
 
-npm install
+    npm install
 
-OR
+    OR
 
-yarn install
+    yarn install
 
-Run the Application
+    c) Run the Application
 
-npm start
+    npm start
 
-OR
+    OR
 
-yarn start
+    yarn start
 
-This will start the development server, and the app will be accessible at http://localhost:3000.
+    d) This will start the development server, and the app will be accessible at http://localhost:3000.
 
-Building for Production
+    e) Building for Production
 
-To create an optimized production build, run:
+        1) To create an optimized production build, run:
 
-npm run build
+        npm run build
 
-OR
+        OR
 
-yarn build
+        yarn build
 
-This will generate the production-ready files in the build directory.
+    f) This will generate the production-ready files in the build directory.
 
-Assumptions Made
 
-The tasks are stored locally in localStorage, and no backend service is currently used.
 
-A task has a title, due date, priority level, and status (completed or not).
+####Assumptions Made
 
-The sorting logic assumes tasks should be sorted by their remaining time.
+    The tasks are stored locally in localStorage, and no backend service is currently used.
 
-Filtering is done based on pre-defined categories (e.g., "Today", "Week", "Important").
+    A task has a title, due date, priority level, and status (completed or not).
 
-The dark theme is applied globally by toggling a CSS class.
+    The sorting logic assumes tasks should be sorted by their remaining time.
 
-Additional Information
+    Filtering is done based on pre-defined categories (e.g., "Today", "Week", "Important").
 
-The project uses React Router for navigation.
+    The dark theme is applied globally by toggling a CSS class.
 
-The About component provides details about the developer and links to GitHub and LinkedIn.
+####Additional Information
 
-The UI is styled using CSS with a clean and minimal design.
+    The project uses React Router for navigation.
 
-Contributing
+    The About component provides details about the developer and links to GitHub and LinkedIn.
 
-If you'd like to contribute, please fork the repository and submit a pull request with your changes.
+    The UI is styled using CSS with a clean and minimal design.
+
+#####Contributing
+
+    If you'd like to contribute, please fork the repository and submit a pull request with your changes.
 
 
 
