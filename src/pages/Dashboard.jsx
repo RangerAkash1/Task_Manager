@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import TaskFormModal from "../components/TaskFormModel";
 
 import TaskList from "../components/TaskList";
-import ThemeToggle from "../components/ThemeToggle";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../css/Dashboard.css";
