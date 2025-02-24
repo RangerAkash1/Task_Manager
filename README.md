@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+Task Manager
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Overview
 
-## Available Scripts
+Task Manager is a simple and efficient task management web application that allows users to create, organize, and manage their tasks with ease. The application supports filtering, sorting, and theme toggling (light/dark mode) for better usability.
 
-In the project directory, you can run:
+Features
 
-### `npm start`
+Add, delete, and mark tasks as complete
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Filter tasks by different categories (All, Today, Week, Important, Completed)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Sort tasks based on remaining time
 
-### `npm test`
+Dark and light theme support
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Persistent storage using local storage
 
-### `npm run build`
+Responsive design for better accessibility
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Setup Instructions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Make sure you have the following installed on your system:
 
-### `npm run eject`
+Node.js (v14 or later)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+npm (Node Package Manager) or yarn
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Clone the Repository
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+git clone https://github.com/RangerAkash1/task-manager.git
+cd task-manager
 
-## Learn More
+Install Dependencies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+OR
 
-### Code Splitting
+yarn install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Run the Application
 
-### Analyzing the Bundle Size
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+OR
 
-### Making a Progressive Web App
+yarn start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This will start the development server, and the app will be accessible at http://localhost:3000.
 
-### Advanced Configuration
+Building for Production
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+To create an optimized production build, run:
 
-### Deployment
+npm run build
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+OR
 
-### `npm run build` fails to minify
+yarn build
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This will generate the production-ready files in the build directory.
+
+Assumptions Made
+
+The tasks are stored locally in localStorage, and no backend service is currently used.
+
+A task has a title, due date, priority level, and status (completed or not).
+
+The sorting logic assumes tasks should be sorted by their remaining time.
+
+Filtering is done based on pre-defined categories (e.g., "Today", "Week", "Important").
+
+The dark theme is applied globally by toggling a CSS class.
+
+Additional Information
+
+The project uses React Router for navigation.
+
+The About component provides details about the developer and links to GitHub and LinkedIn.
+
+The UI is styled using CSS with a clean and minimal design.
+
+Contributing
+
+If you'd like to contribute, please fork the repository and submit a pull request with your changes.
+
+
+
