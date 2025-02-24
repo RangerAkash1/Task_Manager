@@ -1,19 +1,19 @@
-/* Center content and ensure tasks are below the header */
+/* Main container */
 .dashboard-container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 80px;  /* Ensures it starts below the navbar */
+    padding-top: 80px;
     width: 100%;
 }
 
-/* Main content area */
+/* Dashboard content area */
 .dashboard-content {
     width: 90%;
     max-width: 800px;
 }
 
-/* Top controls (Search & Theme Toggle) */
+/* Top controls (Search bar & Theme Toggle) */
 .top-controls {
     display: flex;
     justify-content: space-between;
@@ -33,20 +33,31 @@
 .task-filters {
     display: flex;
     gap: 10px;
-    margin-top: 20px;
     margin-bottom: 20px;
 }
 
 .filter-btn {
-    background-color: #007bff;
-    color: white;
+    background-color: transparent;
+    border: 2px solid #007bff;
+    color: #007bff;
     padding: 8px 15px;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
 }
 
-/* Sorting Dropdown */
+.filter-btn.active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Sorting Section */
+.sort-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .sort-dropdown {
     padding: 8px;
     border: 1px solid #ccc;
@@ -62,16 +73,38 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* No Task Animation */
+.no-tasks {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.no-tasks-image {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+/* Floating Add Task Button */
+
 /* Floating Add Task Button */
 .add-task-btn {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 80px;
+    right: 30px;
     background: #007bff;
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     border: none;
-    padding: 15px 20px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     cursor: pointer;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.add-task-btn:hover {
+    background: #0056b3;
+    transform: scale(1.1);
 }

@@ -1,15 +1,27 @@
 import React, { useState } from "react";
 import { FiMenu, FiSearch } from "react-icons/fi";
 import "../css/Header.css";
+import { useEffect } from "react";
 
 const Header = ({ search, setSearch, theme, setTheme }) => {
     const [darkMode, setDarkMode] = useState(theme === "dark");
 
+    // Apply the theme when the component mounts
+    useEffect(() => {
+        document.body.classList.toggle("dark-theme", darkMode);
+    }, [darkMode]);
+
     const handleThemeToggle = () => {
         const newTheme = darkMode ? "light" : "dark";
+        
         setTheme(newTheme);
         setDarkMode(!darkMode);
+
+        // Update body class for theme
         document.body.classList.toggle("dark-theme", newTheme === "dark");
+
+        // Save the theme preference in localStorage
+        localStorage.setItem("theme", newTheme);
     };
 
     return (

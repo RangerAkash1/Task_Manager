@@ -1,0 +1,88 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container {
+    background: #1a1a2e;
+    color: white;
+    padding: 20px;
+    width: 500px;
+    border-radius: 8px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-btn {
+    background: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+}
+.date-time-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Adds a small gap between Due Date and Due Time */
+}
+
+.date-time-section label {
+    margin-top: 8px;
+}
+
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-body input,
+.modal-body textarea {
+    background: #0f3460;
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+    color: white;
+}
+
+.priority-options button {
+    padding: 8px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.low { background: green; }
+.medium { background: yellow; }
+.high { background: red; }
+
+.active { outline: 3px solid white; }
+
+
+/* Styles for the Add Task Button */
+.add-task-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.add-task-btn:hover {
+    background-color: #0056b3;
+}

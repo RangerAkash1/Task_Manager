@@ -1,55 +1,74 @@
-import React from "react";
-import TaskForm from "../components/TaskForm";
+import React, { useState } from "react";
+import TaskFormModal from "../components/TaskFormModel";
+
 import TaskList from "../components/TaskList";
-//import ThemeToggle from "../components/ThemeToggle";
+import ThemeToggle from "../components/ThemeToggle";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../css/Dashboard.css";
+import noTaskImage from "../assets/img/no-task.png";
 
-const Dashboard = ({ tasks, setTasks, search, setSearch, filter, setFilter, theme, setTheme }) => {
+
+
+const Dashboard = ({ tasks, setTasks, search, setSearch, theme, setTheme }) => {
+  const [activeFilter, setActiveFilter] = useState("All");
+  const [sortBy, setSortBy] = useState("Remaining Time");
+  const [isModalOpen, setIsModalOpen] = useState(false); // Controls the Task Modal
+
+  // Function to filter tasks based on the selected category
+  const filteredTasks = tasks.filter((task) => {
+    if (activeFilter === "All") return true;
+    if (activeFilter === "Today") return task.dueDate === new Date().toISOString().split("T")[0];
+    if (activeFilter === "Week") return task.dueThisWeek;
+    if (activeFilter === "Important") return task.priority === "High";
+    if (activeFilter === "Completed") return task.completed;
+    return false;
+  });
+
   return (
     <>
-      {/* Fixed Header */}
       <Header search={search} setSearch={setSearch} theme={theme} setTheme={setTheme} />
-      
-      {/* Main Dashboard Content Wrapper */}
+
       <div className="dashboard-container">
         <div className="dashboard-content">
-          {/* Search and Theme Toggle */}
-          {/* <div className="top-controls">
-            <input 
-              type="text" 
-              placeholder="Search all tasks" 
-              value={search} 
-              onChange={(e) => setSearch(e.target.value)} 
-              className="search-bar"
-            />
-            <ThemeToggle theme={theme} setTheme={setTheme} />
-          </div> */}
-
-          {/* Task Filters */}
           <div className="task-filters">
-            {["All", "Today", "Week", "Important", "Completed", "High"].map((btn) => (
-              <button key={btn} className="filter-btn">{btn}</button>
+            {["All", "Today", "Week", "Important", "Completed"].map((btn) => (
+              <button 
+                key={btn} 
+                className={`filter-btn ${activeFilter === btn ? "active" : ""}`}
+                onClick={() => setActiveFilter(btn)}
+              >
+                {btn}
+              </button>
             ))}
-            <select className="sort-dropdown">
-              <option>Sort by: Remaining Time</option>
-              <option>Sort by: Priority</option>
-            </select>
+            <div className="sort-section">
+              <span>Sort by:</span>
+              <select className="sort-dropdown" value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
+                <option>Remaining Time</option>
+                <option>Priority</option>
+              </select>
+            </div>
           </div>
 
-          {/* Task Form & Task List */}
           <div className="task-section">
-            <TaskForm setTasks={setTasks} />
-            <TaskList tasks={tasks} setTasks={setTasks} search={search} filter={filter} />
+            {filteredTasks.length > 0 ? (
+              <TaskList tasks={filteredTasks} setTasks={setTasks} search={search} />
+            ) : (
+              <div className="no-tasks">
+              <img src={noTaskImage} alt="No tasks" className="no-tasks-image" />
+                <p>Yaay! No tasks left for {activeFilter.toLowerCase()}!</p>
+              </div>
+            )}
           </div>
         </div>
       </div>
 
       {/* Floating Add Task Button */}
-      <button className="add-task-btn">+</button>
+      <button className="add-task-btn" onClick={() => setIsModalOpen(true)}>+</button>
 
-      {/* Footer */}
+      {/* Task Creation Modal */}
+      {isModalOpen && <TaskFormModal setTasks={setTasks} onClose={() => setIsModalOpen(false)} />}
+
       <Footer />
     </>
   );
